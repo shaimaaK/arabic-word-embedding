@@ -1,3 +1,7 @@
+<div align="center">
+  <img  src="https://github.com/shaimaaK/arabic-word-embedding/assets/54285485/8b52c843-12e2-4de3-ab13-e9abb3d56d24">
+ </div>
+
 # Arabic Word Embedding
 THis project is implemented as part of the "Natural Language Processing and Deep learning " course during my master's degree. In this project I have created two word embedding models: Word2Vec-SkipGram and GLoVE using [ArWiki Dump 2018 Dataset](https://www.kaggle.com/datasets/abedkhooli/arabic-wiki-data-dump-2018) where the Skipgram model is imporved by tuning the values for vector size and window.
 
