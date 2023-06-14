@@ -82,3 +82,10 @@ results
 
 ## References and Resources
 All references and resources are documented used in each step are documented in the .ipynb file in markdown
+- [kdnuggets](https://www.kdnuggets.com/2017/11/building-wikipedia-text-corpus-nlp.html)
+- [machinelearningmastry](https://machinelearningmastery.com/develop-word-embeddings-python-gensim/): (is using GenSim3 syntax)
+- Word2Vec official documentation [page 1](https://radimrehurek.com/gensim/auto_examples/tutorials/run_word2vec.html),[page 2](https://radimrehurek.com/gensim/models/word2vec.html)
+- [Updated Gensim Syntax](https://github.com/RaRe-Technologies/gensim/wiki/Migrating-from-Gensim-3.x-to-4) is used as GenSim version 4 is used in the experiments 
+- [GenSim documentation](https://radimrehurek.com/gensim/models/word2vec.html)
+- [Kaggle gensim-word2vec-tutorial](https://www.kaggle.com/code/pierremegret/gensim-word2vec-tutorial/notebook)
+
