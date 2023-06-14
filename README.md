@@ -3,15 +3,15 @@ THis project is implemented as part of the "Natural Language Processing and Deep
 
 ## Table of contents
 * [Workflow](#workflow)
-  - [Step 1: preprocessing](step1)
-  - [Step 2: define parameters for tuning](step2)
-  - [Step 3: build the word embedding models](step3)
-  - [Step 4: Evaluate the performance](step4)
+  - [Step 1 - preprocessing](step-1-preprocessing)
+  - [Step 2 - define parameters for tuning](step2)
+  - [Step 3 - build the word embedding models](step3)
+  - [Step 4 - Evaluate the performance](step4)
 * [Requirements](#requirements)
 * [References and Resources]()
 
 ## Workflow
-### Step 1: preprocessing 
+### Step 1 - preprocessing 
 **Step 1.1: reading the corpus** <br>
 Parse the compressed arabic wiki articles of the format `.bz2` using the Gensim utility `WikiCorpus` then make sure the encoding is set to **utf-8** as arabic language is encoded as the latin based encoding : utf-8 <br>
 **Step 1.2: remove unwanted characters from the scanned articles** <br>
@@ -22,7 +22,7 @@ Parse the compressed arabic wiki articles of the format `.bz2` using the Gensim 
 **Step 1.3: save the output to corpus_cleaned.txt** <br>
 The output of the preprocessing is stored hence is this step to generate the cleaned data is only executed once. Note the corpus_cleaned.txt is omitted from the repository as it exceeds the allowed size for github repository
 
-### Step 2: define parameters for tuning
+### Step 2 - define parameters for tuning
 *gensim.models.Word2Vec(sentences,vector_size,window,sg,workers)*<hr>
 - List of used Training parameters:
     - **sentences** : corpus of the dataset
@@ -40,10 +40,10 @@ The output of the preprocessing is stored hence is this step to generate the cle
 As common knowledge in the NLP research community the window size starts from 5, therefore we have tried 10,15,20 on SkipGram and on GLoVE we tired 10,15. Another parameter dependent on the training corpus, is the embedding matrix size which is tested as 500, and 1000. Unfortunately, (as expected) the value 1000 generated a memory error as the environment memory is unable to allocate the enough space to run either of the algorithms therefore is fixed to 500. Lastly some parameters are dedicated to GLoVE are also
 experimented with such as the learning rate 0.01 and 0.05 while epochs parameter is fixed to 50 to avoid extensive runtime. It worth mentioning, the experiments are tested on 3 variations of SkipGram model and 4 varations of GLoVE model and the results discussed are chosen from the full results which are available and can be tested using the provided code.
 
-### Step 3: build the word embedding models
+### Step 3 - build the word embedding models
 Using GenSim and GLoVE libararies on python the arabic-word-embedding models are trained and saved. It is woth noting that the GLoVE library only worked on Colab with older versions of python (3.7 and lower) as the library implementation is developed for those version of python
 
-### Step 4: Evaluate the performance
+### Step 4 - Evaluate the performance
 **Test 1 : Most Similar Words** <br>
 Find the top-N most similar words. Positive words contribute positively towards the similarity, negative words negatively. [link](https://tedboy.github.io/nlps/generated/generated/gensim.models.Word2Vec.most_similar.html#gensim.models.Word2Vec.most_similar)<br>
 - Pick 8 Arabic words and, for each one, ask each model about
