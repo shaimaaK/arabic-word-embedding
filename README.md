@@ -3,7 +3,7 @@
  </div>
 
 # Arabic Word Embedding
-THis project is implemented as part of the "Natural Language Processing and Deep learning " course during my master's degree. In this project I have created two word embedding models: Word2Vec-SkipGram and GLoVE using [ArWiki Dump 2018 Dataset](https://www.kaggle.com/datasets/abedkhooli/arabic-wiki-data-dump-2018) where the Skipgram model is imporved by tuning the values for vector size and window.
+THis project is implemented as part of the "Natural Language Processing and Deep learning " course during my master's degree. In this project I have created two word embedding models: Word2Vec-SkipGram and GLoVE using [ArWiki Dump 2018 Dataset](https://www.kaggle.com/datasets/abedkhooli/arabic-wiki-data-dump-2018) where the Skipgram model is imporved by tuning the values for vector size and window then the evaluation of each model on 4 stages with visualization of the results using T-SNE. The report of the project provides further inforamtion about the experiments and the results analyses and discussion
 
 ## Table of contents
 - [Workflow](#workflow)
@@ -29,16 +29,15 @@ The output of the preprocessing is stored hence is this step to generate the cle
 ### Step 2 define parameters for tuning
 *gensim.models.Word2Vec(sentences,vector_size,window,sg,workers)*<hr>
 - List of used Training parameters:
-    - **sentences** : corpus of the dataset
-    - **vector_size** (int, optional) – Dimensionality of the word vectors.
-    - **window** :(int, optional) – Maximum distance between the current and predicted word within a sentence
-    - **sg** ({0, 1}, optional) – Training algorithm: 1 for skip-gram; otherwise CBOW
-    - **workers** (int, optional) – Use these many worker threads to train the model (=faster training with multicore machines). 
-- Summary of list of parameters needs tuning : 1) vector_size, 2) window-size 3) learning rate
-- (SkipGram) List of parameters tuning:
+    - `sentences` : corpus of the dataset
+    - `vector_size` (int, optional) – Dimensionality of the word vectors.
+    - `window` :(int, optional) – Maximum distance between the current and predicted word within a sentence
+    - `sg` ({0, 1}, optional) – Training algorithm: 1 for skip-gram; otherwise CBOW
+    - `workers` (int, optional) – Use these many worker threads to train the model (=faster training with multicore machines). 
+- `SkipGram` List of parameters tuning:
   - vector_size_list=[500,1000]
   - window_list=[10,15,20]
-- (GLoVE) List of parameters tuning
+- `GLoVE` List of parameters tuning
   - learning rate=[0.01,0.05]
   - window_list=[10,15,20] </ul>
 As common knowledge in the NLP research community the window size starts from 5, therefore we have tried 10,15,20 on SkipGram and on GLoVE we tired 10,15. Another parameter dependent on the training corpus, is the embedding matrix size which is tested as 500, and 1000. Unfortunately, (as expected) the value 1000 generated a memory error as the environment memory is unable to allocate the enough space to run either of the algorithms therefore is fixed to 500. Lastly some parameters are dedicated to GLoVE are also
