@@ -1,0 +1,20 @@
+Glove/saved model/
+Glove/corpus.model
+Glove/glove.model
+Glove/corpus_cleaned.txt
+
+
+SkipGram/50010word2vec.wordvectors
+SkipGram/50010word2vec.wordvectors.vectors.npy
+
+SkipGram/50015word2vec.wordvectors
+SkipGram/50015word2vec.wordvectors.vectors.npy
+
+SkipGram/50020word2vec.wordvectors
+SkipGram/50020word2vec.wordvectors.vectors.npy
+
+SkipGram/100010word2vec.wordvectors
+SkipGram/100010word2vec.wordvectors.vectors.npy
+SkipGram/corpus_cleaned.txt
+SkipGram/corpus_parsed.txt
+SkipGram/arwiki.xml.bz2
