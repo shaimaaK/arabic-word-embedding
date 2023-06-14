@@ -3,12 +3,12 @@ THis project is implemented as part of the "Natural Language Processing and Deep
 
 ## Table of contents
 - [Workflow](#workflow)
-  * [Step 1 preprocessing](step-1-preprocessing)
-  * [Step 2 define parameters for tuning](step2-define-parameters-for-tuning)
-  * [Step 3 build the word embedding models](step3-build-the-word-embedding-models)
-  * [Step 4 evaluate the performance](step-4-evaluate-the-performance)
+  * [Step 1 preprocessing](#step-1-preprocessing)
+  * [Step 2 define parameters for tuning](#step-2-define-parameters-for-tuning)
+  * [Step 3 build the word embedding models](#step-3-build-the-word-embedding-models)
+  * [Step 4 evaluate the performance](#step-4-evaluate-the-performance)
 - [Requirements](#requirements)
-- [References and Resources]()
+- [References and Resources](#references-and-resources)
 
 ## Workflow
 ### Step 1 preprocessing 
